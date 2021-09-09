@@ -1,11 +1,4 @@
-python -m pipenv install
-
-# python -m pip install venv
-# python -m venv env
-# source ./env/bin/activate
-# pip install -r requirements.txt
-
-# sudo docker-compose up -d --build --remove-orphans
+sudo docker-compose up -d mock-server && sudo docker-compose build mock-code
 
 for file in ./mock-code/*.py
 do

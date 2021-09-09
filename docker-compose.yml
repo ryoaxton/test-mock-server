@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  mock-server:
+   image: jamesdbloom/mockserver:mockserver-5.4.1
+
+   ports:
+    - 1080:1080
+
+   environment:
+    - LOG_LEVEL=INFO
+
+  mock-code:
+   build: .
+  #  command: bash run.sh
+   depends_on: 
+    - mock-server

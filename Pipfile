@@ -1,8 +1,0 @@
-[[source]]
-url = "https://pypi.org/simple"
-verify_ssl = true
-name = "pypi"
-
-[packages]
-mockserver-friendly-client = "~=0.4.1"
-requests = "~=2.25.1"

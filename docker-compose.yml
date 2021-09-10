@@ -12,3 +12,13 @@ services:
    build: 
     context: .
     network: host
+
+  ngrok:
+    image: shkoliar/ngrok:latest
+    ports: 
+      - 4551:4551
+    links:
+      - mock-server
+    environment:
+      - DOMAIN=mock-server
+      - PORT=1080

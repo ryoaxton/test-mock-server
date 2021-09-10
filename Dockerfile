@@ -4,7 +4,4 @@ WORKDIR /home/app
 COPY . .
 
 RUN pip install -r requirements.txt
-RUN sleep 3
-
-# RUN ["chmod", "+x", "run.sh"]
-# RUN ./run.sh
+RUN for file in ./mock-code/*.py; do python $file; done
